@@ -60,6 +60,80 @@ extern "C" {
 /* RETRO_LANGUAGE_CHINESE_TRADITIONAL */
 
 /* RETRO_LANGUAGE_CHINESE_SIMPLIFIED */
+struct retro_core_option_definition option_defs_chs[] = {
+   {
+      "vb_3dmode",
+      "3D模式",
+      "选择3D模式。双色互补 - 用于传统双色滤光立体眼镜；虚拟视镜 - 用于CyberScope 3D设备。左右格式 - 左眼图像显示在左边，右眼图像显示在右边。垂直交错 - 垂直方向交替显示左眼和右眼视图扫描线。水平交错 - 水平方向交替显示左眼和右眼视图扫描线。",
+      {
+         { "anaglyph",  "双色互补" },
+         { "cyberscope",  "虚拟视镜" },
+         { "side-by-side",  "左右格式" },
+         { "vli", "垂直交错"},
+         { "hli", "水平交错"},
+         { NULL, NULL },
+      },
+      "anaglyph",
+   },
+   {
+      "vb_anaglyph_preset",
+      "双色互补预设",
+      "双色互补预设颜色。",
+      {
+         { "disabled",     NULL },
+         { "red & blue",     "红色和蓝色" },
+         { "red & cyan",     "红色和青色" },
+         { "red & electric cyan",     "红色和电青色" },
+         { "green & magenta",     "绿色和品红色" },
+         { "yellow & blue",     "黄色和蓝色" },
+         { NULL, NULL},
+      },
+      "disabled",
+   },
+   {
+      "vb_color_mode",
+      "调色板",
+      "",
+      {
+         { "black & red", "黑色和红色" },
+         { "black & white",  "黑色和白色" },
+         { "black & blue",  "黑色和蓝色" },
+         { "black & cyan",  "黑色和青色" },
+         { "black & electric cyan",  "黑色和电青色" },
+         { "black & green",  "黑色和绿色" },
+         { "black & magenta",  "黑色和品红色" },
+         { "black & yellow",  "黑色和黄色" },
+         { NULL, NULL},
+      },
+      "black & red",
+   },
+   {
+      "vb_right_analog_to_digital",
+      "右摇杆转模拟到数字转换",
+      "",
+      {
+         { "disabled",  NULL },
+         { "enabled",  NULL },
+         { "invert x",  "X轴反向" },
+         { "invert y",  "Y轴反向" },
+         { "invert both",  "同时反向" },
+         { NULL, NULL },
+      },
+      "disabled",
+   },
+   {
+      "vb_cpu_emulation",
+      "CPU模拟（需要重启）",
+      "选择快速或者精确（更慢）模拟。",
+      {
+         { "accurate",      "精确" },
+         { "fast",      "快速" },
+         { NULL, NULL},
+      },
+      "fast",
+   },
+   { NULL, NULL, NULL, { NULL, NULL }, NULL },
+};
 
 /* RETRO_LANGUAGE_ESPERANTO */
 
